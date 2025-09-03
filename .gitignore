@@ -1,0 +1,9 @@
+Backend/__pycache__
+Backend/nivara_venv
+Backend/.env
+Backend/graph.py
+
+nivara-frontend/.next
+nivara-frontend/node_modules
+nivara-frontend/public
+nivara-frontend/.gitignore
