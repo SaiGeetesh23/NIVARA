@@ -1,0 +1,17 @@
+# Dependencies - Docker installs these fresh from package.json
+node_modules/
+
+# Build output - Docker regenerates this during build
+.next/
+
+# Secrets
+.env
+.env.*
+
+# Git history
+.git
+.gitignore
+
+# Logs
+*.log
+npm-debug.log*

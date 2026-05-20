@@ -1,25 +1,44 @@
-python-dotenv
-pymilvus
-pypdf
+# Nivara Backend Dependencies
+# Install with: pip install -r requirements.txt
+#
+# Top-level packages only — pip resolves compatible sub-dependencies automatically.
+# To regenerate with exact pins after installing: pip freeze > requirements.txt
 
+# --- AI & LLM ---
 langchain
 langchain-openai
-langchain-core
-langchain-community
 langchain-nvidia-ai-endpoints
 langchain-milvus
+langchain-community
 langgraph
-langgraph-cli
-langgraph-cli[inmem]
 langgraph-supervisor
 
-bcrypt
-python-multipart
+# --- Vector Database ---
+pymilvus
+
+# --- PDF Loading (for the knowledge base) ---
+pypdf
+
+# --- Web Framework ---
 fastapi
-yfinance
-joblib
-scikit-learn
-passlib
-python-jose
+uvicorn[standard]
+
+# --- Database ---
 sqlalchemy
 psycopg2-binary
+
+# --- Authentication ---
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+
+# --- Market Data ---
+yfinance
+
+# --- ML Model ---
+joblib
+scikit-learn
+
+# --- Config ---
+python-dotenv
+langchain-classic

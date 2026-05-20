@@ -20,8 +20,9 @@ try:
     print("✅ Database connection successful.")
     connection.close()
 except OperationalError as e:
-    print(f"❌ Database connection failed: {e}")
-    sys.exit(1)
+    raise RuntimeError(
+        f"❌ Database connection failed. Check your DATABASE_URL in .env.\nDetails: {e}"
+    ) from e
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

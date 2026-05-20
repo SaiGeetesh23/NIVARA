@@ -1,0 +1,15 @@
+# Python environment - Docker creates its own during build
+nivara_venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets - injected at runtime via docker-compose, never baked into image
+.env
+
+# Git history - not needed inside container
+.git
+.gitignore
+
+# Logs
+*.log
